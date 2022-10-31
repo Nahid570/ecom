@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   background: linear-gradient(rgba(24, 21, 21, 0.664), rgba(48, 43, 43, 0.658)),
@@ -10,11 +11,17 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${mobile({
+    backgroundPosition: "center",
+  })}
 `;
 const Wrapper = styled.div`
   padding: 20px;
   border: 2px solid white;
   width: 50%;
+  ${mobile({
+    width: "90%",
+  })}
 `;
 const Title = styled.h1`
   text-transform: uppercase;
@@ -24,6 +31,9 @@ const Title = styled.h1`
 const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
+  ${mobile({
+    flexDirection: "column",
+  })}
 `;
 const Input = styled.input`
   flex: 1;

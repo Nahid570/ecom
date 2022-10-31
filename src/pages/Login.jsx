@@ -1,20 +1,28 @@
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   background: linear-gradient(rgba(24, 21, 21, 0.664), rgba(48, 43, 43, 0.658)),
     url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
       center;
   background-size: cover;
+
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  ${mobile({
+    backgroundPosition: "right",
+  })}
 `;
 const Wrapper = styled.div`
   padding: 20px;
   border: 2px solid white;
   width: 40%;
+  ${mobile({
+    width: "90%",
+  })}
 `;
 const Title = styled.h1`
   text-transform: uppercase;

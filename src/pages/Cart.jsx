@@ -4,10 +4,14 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 20px;
+  ${mobile({
+    padding: "10px",
+  })}
 `;
 const Title = styled.h1`
   text-transform: uppercase;
@@ -34,6 +38,9 @@ const TopButton = styled.button`
 const TopTexts = styled.div`
   display: flex;
   gap: 1rem;
+  ${mobile({
+    display: "none",
+  })}
 `;
 const TopText = styled.span`
   text-decoration: underline;
@@ -43,6 +50,9 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0px 20px;
+  ${mobile({
+    flexDirection: "column",
+  })}
 `;
 const Info = styled.div`
   flex: 3;
@@ -50,6 +60,9 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({
+    flexDirection: "column",
+  })}
 `;
 const ProductDetail = styled.div`
   flex: 2;
@@ -92,6 +105,9 @@ const ProductAmount = styled.div`
 const ProductPrice = styled.div`
   font-size: 1.4rem;
   font-weight: 300;
+  ${mobile({
+    marginBottom: "20px",
+  })}
 `;
 const Summary = styled.div`
   flex: 1;
@@ -124,7 +140,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 const Hr = styled.hr`
-  background-color: #eee;
+  background-color: #ad9f9fa2;
   border: none;
   height: 1px;
 `;
