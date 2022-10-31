@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  background: linear-gradient(
-      rgba(24, 21, 21, 0.664),
-      rgba(48, 43, 43, 0.658)
-    ),
+  background: linear-gradient(rgba(24, 21, 21, 0.664), rgba(48, 43, 43, 0.658)),
     url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
       center;
   background-size: cover;
@@ -73,7 +70,7 @@ const Login = () => {
         <Title>sign in</Title>
         <Form>
           <Input placeholder="Username" />
-          <Input placeholder="Password" />
+          <Input placeholder="Password" type="password" />
           <Button>Login</Button>
           <Link>Don't have an account? Create a new one</Link>
         </Form>
